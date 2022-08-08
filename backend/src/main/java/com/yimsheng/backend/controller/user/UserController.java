@@ -29,16 +29,16 @@ public class UserController {
         return userMapper.selectById(userId);
     }
 
-    @GetMapping("/user/add/{userId}/{username}/{password}/")
-    public String addUser(@PathVariable int userId,@PathVariable String username,@PathVariable String password){
-        //加密 密码
-        PasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
-        String encodedPassword=passwordEncoder.encode(password);
-        //create user
-        User user = new User(userId,username,encodedPassword);
-        userMapper.insert(user);
-        return "Add User Successfully";
-    }
+//    @GetMapping("/user/add/{userId}/{username}/{password}/")
+//    public String addUser(@PathVariable int userId,@PathVariable String username,@PathVariable String password){
+//        //加密 密码
+//        PasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
+//        String encodedPassword=passwordEncoder.encode(password);
+//        //create user
+//        User user = new User(userId,username,encodedPassword);
+//        userMapper.insert(user);
+//        return "Add User Successfully";
+//    }
 
     @GetMapping("/user/delete/{userId}/")
     public String deleteUser(@PathVariable int userId){

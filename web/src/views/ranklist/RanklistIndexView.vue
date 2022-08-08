@@ -5,7 +5,7 @@ Rank List
 </template>
 
 <script>
-import ContentField from '../../components/ContendField.vue'
+import ContentField from '../../components/ContentField.vue'
 
 export default{
     components:{
