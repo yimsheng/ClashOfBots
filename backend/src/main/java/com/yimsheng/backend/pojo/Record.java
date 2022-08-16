@@ -9,20 +9,23 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Data //getter setter
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-public class Bot {
-    @TableId(type = IdType.AUTO)
+@NoArgsConstructor
+public class Record {
+    @TableId(type= IdType.AUTO)
     private Integer id;
-    private Integer userId;
-    private String title;
-    private String description;
-    private String content;
+    private Integer aId;
+    private Integer aSx;
+    private Integer aSy;
+    private Integer bId;
+    private Integer bSx;
+    private Integer bSy;
+    private String aSteps;
+    private String bSteps;
+    private String map;
+    private String loser;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "America/New_York")
     private Date createtime;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "America/New_York")
-    private Date modifytime;
-
 
 }

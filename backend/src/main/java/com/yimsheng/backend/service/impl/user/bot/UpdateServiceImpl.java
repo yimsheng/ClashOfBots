@@ -1,10 +1,10 @@
-package com.yimsheng.backend.service.impl.user.bot;
+package com.yimsheng.backend.Service.impl.user.bot;
 
 import com.yimsheng.backend.mapper.BotMapper;
 import com.yimsheng.backend.pojo.Bot;
 import com.yimsheng.backend.pojo.User;
-import com.yimsheng.backend.service.impl.utils.UserDetailsImpl;
-import com.yimsheng.backend.service.user.bot.UpdateService;
+import com.yimsheng.backend.Service.impl.utils.UserDetailsImpl;
+import com.yimsheng.backend.Service.user.bot.UpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -73,7 +73,6 @@ public class UpdateServiceImpl implements UpdateService {
                 title,
                 description,
                 content,
-                bot.getRating(),
                 bot.getCreatetime(),
                 new Date()
         );

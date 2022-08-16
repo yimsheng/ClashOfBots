@@ -1,7 +1,7 @@
-package com.yimsheng.backend.service.impl;
+package com.yimsheng.backend.Service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.yimsheng.backend.service.impl.utils.UserDetailsImpl;
+import com.yimsheng.backend.Service.impl.utils.UserDetailsImpl;
 import com.yimsheng.backend.mapper.UserMapper;
 import com.yimsheng.backend.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;

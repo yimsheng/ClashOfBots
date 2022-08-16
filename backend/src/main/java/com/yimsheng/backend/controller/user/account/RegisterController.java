@@ -1,6 +1,6 @@
 package com.yimsheng.backend.controller.user.account;
 
-import com.yimsheng.backend.service.user.account.RegisterService;
+import com.yimsheng.backend.Service.user.account.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;

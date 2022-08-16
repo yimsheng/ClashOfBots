@@ -9,7 +9,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input v-model="password" type="password" class="form-control" id="password" placeholder="********">
+                        <input v-model="password" type="password" class="form-control" id="password" placeholder="password">
                     </div>
                     <div class="error-message">{{ error_message }}</div>
                     <button type="submit" class="btn btn-primary">Log in</button>
@@ -34,9 +34,11 @@ export default{
         let password = ref('');
         let error_message = ref('');
 
-
+        
         const jwt_token=localStorage.getItem("jwt_token");
+        
         if(jwt_token){
+            
             store.commit("updateToken",jwt_token);
             store.dispatch("getInfo",{
                 success(){
@@ -50,7 +52,7 @@ export default{
         }else{
             store.commit("updatePullingInfo",false);
         }
-
+        
         const login = () =>{
             //清空
             error_message.value="";
@@ -69,6 +71,7 @@ export default{
                     error_message.value = "Wrong Username and password";
                 }
             })
+            
         }
         return{
             username,

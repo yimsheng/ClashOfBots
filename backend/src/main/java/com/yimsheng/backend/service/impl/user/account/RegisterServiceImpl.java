@@ -1,7 +1,7 @@
-package com.yimsheng.backend.service.impl.user.account;
+package com.yimsheng.backend.Service.impl.user.account;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.yimsheng.backend.service.user.account.RegisterService;
+import com.yimsheng.backend.Service.user.account.RegisterService;
 import com.yimsheng.backend.mapper.UserMapper;
 import com.yimsheng.backend.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,7 +64,7 @@ public class RegisterServiceImpl implements RegisterService {
 
         String encodedPassword = passwordEncoder.encode(password);
         String photo = "https://i02piccdn.sogoucdn.com/48981c3dde37b2c9";
-        User user = new User(null,username,encodedPassword,photo);
+        User user = new User(null,username,encodedPassword,photo,1500);
         userMapper.insert(user);
         map.put("error_message","success");
         return map;

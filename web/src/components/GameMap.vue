@@ -7,15 +7,18 @@
 
 <script>
 import {GameMap} from "@/assets/scripts/GameMap";
-import {ref,onMounted} from "vue";
+import {ref,onMounted } from "vue";
+import {useStore} from 'vuex';
 export default{
     setup(){
+        const store = useStore();
         let parent = ref(null);
         let canvas = ref(null);
         //组件挂载完要执行哪些操作
         onMounted(()=>{
             //创建GameMap对象
-            new GameMap(canvas.value.getContext('2d'),parent.value)
+            store.commit("updateGameObject",new GameMap(canvas.value.getContext('2d'),parent.value,store));
+            
             });
 
         return {

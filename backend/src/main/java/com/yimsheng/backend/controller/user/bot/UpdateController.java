@@ -1,6 +1,6 @@
 package com.yimsheng.backend.controller.user.bot;
 
-import com.yimsheng.backend.service.user.bot.UpdateService;
+import com.yimsheng.backend.Service.user.bot.UpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;

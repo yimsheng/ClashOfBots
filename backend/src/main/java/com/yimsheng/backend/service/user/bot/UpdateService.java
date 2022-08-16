@@ -1,4 +1,4 @@
-package com.yimsheng.backend.service.user.bot;
+package com.yimsheng.backend.Service.user.bot;
 
 import java.util.Map;
 

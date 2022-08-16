@@ -53,11 +53,14 @@ import { useStore } from 'vuex';
 //get current route
 export default{
     setup(){
+      
         const store=useStore();
         const route = useRoute();
         let route_name=computed(()=>route.name)
+       
         const logout=()=>{
           store.dispatch("logout");
+          
         }
         return {
             route_name,
