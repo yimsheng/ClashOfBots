@@ -29,8 +29,11 @@
                     {{$store.state.pk.opponent_username}}
                 </div>
             </div>
-            <div class="col-12" style="text-align: center; padding-top: 15vh;">
-                <button @click="click_match_btn" type="button" class="btn btn-warning btn-lg">{{ match_btn_info }}</button>
+            <div class="col-12" style="text-align: center; padding-top: 10vh;">
+                <button @click="click_match_btn" type="button" class="btn btn-two">
+                   {{ match_btn_info }}
+                </button>
+                
             </div>
 
         </div>
@@ -95,7 +98,8 @@ div.matchground{
     width:60vw;
     height: 70vh;
     margin:40px auto;
-    background-color: rgba(80, 90, 119, 0.5);
+    background-image: linear-gradient(230deg,rgb(70, 133, 206),rgba(55, 204, 92, 0.603));
+    border-radius: 20px;
     }
 div.user-photo{
     text-align: center;
@@ -110,7 +114,7 @@ div.user-username{
     font-size:24px;
     font-weight:600;
     color:white;
-    padding-top:2vh;
+    padding-top:4vh;
 }
 div.user-select-bot{
     padding-top:20vh;
@@ -119,4 +123,59 @@ div.user-select-bot>select{
     width:60%;
     margin:0 auto;
 }
+.btn {
+  line-height: 50px;
+  height: 60px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.btn-two {
+  color: rgb(217, 245, 243);
+  transition: all 0.5s;
+  position: relative; 
+  
+}
+.btn-two span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+}
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
 </style>

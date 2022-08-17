@@ -35,7 +35,7 @@ public class WebSocketServer {
     private final static String removePlayerUrl="http://127.0.0.1:3001/player/remove/";
 
     //不是单例模式不能直接autowired，要搞成static做全局然后用
-    private static UserMapper userMapper;
+    public static UserMapper userMapper;
     public static RecordMapper recordMapper;
     public static RestTemplate restTemplate;
     private static BotMapper botMapper;
@@ -121,6 +121,7 @@ public class WebSocketServer {
 
         JSONObject respA = new JSONObject();
         respA.put("event", "start-matching");
+        respA.put("my_snake","A");
         respA.put("opponent_username", b.getUsername());
         respA.put("opponent_photo", b.getPhoto());
         respA.put("game", respGame);
@@ -129,6 +130,7 @@ public class WebSocketServer {
         }
         JSONObject respB = new JSONObject();
         respB.put("event", "start-matching");
+        respB.put("my_snake","B");
         respB.put("opponent_username", a.getUsername());
         respB.put("opponent_photo", a.getPhoto());
         respB.put("game", respGame);

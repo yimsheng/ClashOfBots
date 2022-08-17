@@ -14,6 +14,7 @@ export default {
       b_sy:0,
       gameObject:null,
       loser:"none",
+      my_snake:"",
   },
   getters: {
   },
@@ -25,6 +26,7 @@ export default {
       updateOpponent(state,opponent){
           state.opponent_username=opponent.username;
           state.opponent_photo=opponent.photo;
+          state.my_snake=opponent.snake;
       },
       updateStatus(state,status){
           state.status=status;

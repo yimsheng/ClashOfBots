@@ -1,5 +1,6 @@
 package com.yimsheng.backend.Service.impl.user.bot;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yimsheng.backend.mapper.BotMapper;
 import com.yimsheng.backend.pojo.Bot;
 import com.yimsheng.backend.pojo.User;
@@ -55,6 +56,14 @@ public class AddServiceImpl implements AddService {
             map.put("error_message","code cannot be longer than 100000");
             return map;
         }
+
+        QueryWrapper<Bot> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_id",user.getId());
+        if(botMapper.selectCount(queryWrapper)>=10){
+            map.put("error_message","Each user cannot create more than 10 bots!");
+            return map;
+        }
+
         Date now=new Date();
         Bot bot = new Bot(null,user.getId(),title,description,content,now,now);
 

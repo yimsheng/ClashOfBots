@@ -23,6 +23,7 @@ export default{
         const socketUrl = `ws://127.0.0.1:3000/websocket/${store.state.user.token}/`;
         // 防止前一局的结果带入
         store.commit("updateLoser","none");
+        store.commit("updateIsRecord",false);
 
         let socket=null;
         onMounted(()=>{
@@ -43,6 +44,7 @@ export default{
                     store.commit("updateOpponent",{
                         username:data.opponent_username,
                         photo:data.opponent_photo,
+                        snake:data.my_snake,
                     });
                     setTimeout(()=>{
                         store.commit("updateStatus","playing");
