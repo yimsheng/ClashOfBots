@@ -1,1 +1,1 @@
-## This is a good project
+## Clash of bots
