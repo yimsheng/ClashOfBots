@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 public class MatchingServiceImpl implements MatchingService {
     public final static MatchingPool matchingpool=new MatchingPool();
     @Override
-    public String addPlayer(Integer userId, Integer rating) {
-        matchingpool.addPlayer(userId,rating);
+    public String addPlayer(Integer userId, Integer rating,Integer botId) {
+        matchingpool.addPlayer(userId,rating,botId);
         return "add player success";
     }
 

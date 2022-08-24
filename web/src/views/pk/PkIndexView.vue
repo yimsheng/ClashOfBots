@@ -21,6 +21,9 @@ export default{
         
         const store=useStore();
         const socketUrl = `ws://127.0.0.1:3000/websocket/${store.state.user.token}/`;
+        // 防止前一局的结果带入
+        store.commit("updateLoser","none");
+
         let socket=null;
         onMounted(()=>{
             store.commit("updateOpponent",{
@@ -35,6 +38,7 @@ export default{
             }
             socket.onmessage=msg=>{
                 const data=JSON.parse(msg.data);
+                // 后端发来贺电说匹配好了
                 if(data.event==="start-matching"){
                     store.commit("updateOpponent",{
                         username:data.opponent_username,
@@ -45,11 +49,13 @@ export default{
                     },1000);
                     store.commit("updateGamemap",data.game);
                 }else if(data.event==="move"){
+                    //后端发来两个玩家都输入下一步了
                     const game=store.state.pk.gameObject;
                     const [snake0,snake1] = game.snakes;
                     snake0.set_direction(data.a_direction);
                     snake1.set_direction(data.b_direction);
                 }else if(data.event==="result"){
+                    //后端发来游戏结束
                     const game=store.state.pk.gameObject;
                     const [snake0,snake1] = game.snakes;
                     if(data.loser==="all"||data.loser==="A"){
