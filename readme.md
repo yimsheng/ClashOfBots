@@ -14,34 +14,34 @@ Frontend is implemented with Vue.js and used AJAX for communication between fron
 
 ![image-20220826115752163](/images/image-20220826115752163.png)
 
-![image-20220826115802533](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115802533.png)
+![image-20220826115802533](/images/image-20220826115802533.png)
 
 ### User information page
 
-![image-20220826115330948](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115330948.png)
+![image-20220826115330948](/images/image-20220826115330948.png)
 
 ### Full CRUD of Bots
 
-![image-20220826115229073](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115229073.png)
+![image-20220826115229073](/images/image-20220826115229073.png)
 
-![image-20220826115316938](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115316938.png)
+![image-20220826115316938](/images/image-20220826115316938.png)
 
 ### Matching page
 
-![image-20220826115029563](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115029563.png)
+![image-20220826115029563](/images/image-20220826115029563.png)
 
-![image-20220826115535707](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115535707.png)
+![image-20220826115535707](/images/image-20220826115535707.png)
 
 ### Game page
 
 
-![image-20220826115416829](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115416829.png)
+![image-20220826115416829](/images/image-20220826115416829.png)
 
-![image-20220826115431297](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115431297.png)
+![image-20220826115431297](/images/image-20220826115431297.png)
 
 ### Game recording
 
-![image-20220826115116392](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115116392.png)
+![image-20220826115116392](/images/image-20220826115116392.png)
 
 
 
