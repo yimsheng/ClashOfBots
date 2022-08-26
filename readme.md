@@ -12,7 +12,7 @@ Frontend is implemented with Vue.js and used AJAX for communication between fron
 
 ### Login and Register
 
-![image-20220826115752163](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115752163.png)
+![image-20220826115752163](/images/image-20220826115752163.png)
 
 ![image-20220826115802533](/Users/yimsheng/Library/Application Support/typora-user-images/image-20220826115802533.png)
 
